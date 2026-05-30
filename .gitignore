@@ -15,3 +15,5 @@ build/
 # 외부 라이브러리 폴더 (직접 관리할 필요 없음)
 **/bin/
 **/out/
+
+/src/main/resources/application-local.properties
