@@ -1,6 +1,15 @@
+package com.nullspace.domain.video;
+
+import com.nullspace.domain.channel.Channel;
+import jakarta.persistence.*; // @Entity, @Id, @Column, @ManyToOne 등 포함
+import lombok.*; // @Getter, @Builder, @NoArgsConstructor 등 포함
+import java.time.LocalDateTime; // LocalDateTime 포함
+
 @Entity
 @Getter
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Builder
+@AllArgsConstructor
 public class Video {
     @Id
     private String videoId; // PK
@@ -18,17 +27,4 @@ public class Video {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "channel_id")
     private Channel channel;
-
-    // 생성자도 필드에 맞춰 업데이트
-    public Video(String videoId, String title, String thumbnailUrl, Long viewCount, 
-                 Long likeCount, LocalDateTime publishedAt, String description, Channel channel) {
-        this.videoId = videoId;
-        this.title = title;
-        this.thumbnailUrl = thumbnailUrl;
-        this.viewCount = viewCount;
-        this.likeCount = likeCount;
-        this.publishedAt = publishedAt;
-        this.description = description;
-        this.channel = channel;
-    }
 }

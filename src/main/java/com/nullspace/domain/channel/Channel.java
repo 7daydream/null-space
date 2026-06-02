@@ -1,3 +1,12 @@
+package com.nullspace.domain.channel;
+
+import com.nullspace.domain.video.Video; // Video 클래스와 연결
+import jakarta.persistence.*; // @Entity, @Id, @OneToMany 등
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import java.util.ArrayList; // List와 ArrayList는 java.util에 있습니다
+import java.util.List;
+
 @Entity
 @Getter
 @NoArgsConstructor
