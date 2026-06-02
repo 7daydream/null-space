@@ -1,6 +1,7 @@
 # Gradle
 .gradle/
 build/
+backend/build/
 
 # IDE (VS Code)
 .vscode/
@@ -16,6 +17,8 @@ build/
 **/bin/
 **/out/
 
-/src/main/resources/application-local.properties
-/src/test/resources/application.properties
-/data/
+*local.properties
+*application-local.properties
+backend/src/main/resources/application-local.properties
+backend/src/test/resources/application.properties
+**/data/
